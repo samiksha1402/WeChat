@@ -27,7 +27,7 @@ var firebaseConfig = {
     }
 
 function getData() {firebase.database().ref("/").on('value', function(snapshot) {document.getElementById("output").innerHTML = "";snapshot.forEach(function(childSnapshot) {childKey  = childSnapshot.key;
-       Room_names = childKey;
+       room_names = childKey;
        console.log("room_names - " + room_names );
        row = "<div class='room_name' id="+room_names+" onclick='redirectTo_roomname(this.id)'> #" + room_names + "</div> <hr>";
        document.getElementById("output").innerHTML += row;
